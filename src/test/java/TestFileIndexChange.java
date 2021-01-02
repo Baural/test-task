@@ -1,6 +1,4 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import token.Main;
 
 /**
  * @author Baurzhan Alzhanov
@@ -10,7 +8,9 @@ import token.Main;
 
 public class TestFileIndexChange {
     @Test
-    public void whenMoneyNegative_thenReturnInvalidInput() throws Exception {
-        Main.main(new String[] {"It", "was"});
+    public void checkWordInIndexedFile() throws Exception {
+        /**
+         * not realeased yet
+         */
     }
 }

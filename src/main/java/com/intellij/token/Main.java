@@ -12,7 +12,10 @@ import java.util.Set;
 
 public class Main {
 
-    // directories
+    /**
+     * directories
+     */
+
     private static final String directory = "src/main/resources"; // where all the files are
 
 
@@ -20,7 +23,10 @@ public class Main {
 
         Search searcher = new Search();
 
-        //specifying the indexed .txt files and directories
+        /**
+         * Specifying the indexed .txt files and directories
+         */
+
         File dir = new File(directory);
         for (File file : dir.listFiles()) {
             if (file.isFile() && file.getName().endsWith(".txt")) {
@@ -29,7 +35,9 @@ public class Main {
             }
         }
 
-        // Search
+        /**
+         * Search
+         */
         Scanner in = new Scanner(System.in);
         while (true) {
             System.out.println();
@@ -37,7 +45,10 @@ public class Main {
             String line = in.nextLine();
             String[] wordList = line.split(" ");
             if (wordList[0].equals("#")) {
-                // Report word counts
+                /**
+                 * Report word counts
+                 */
+
                 if (wordList.length==1)
                     System.err.println("Please enter the number or words");
                 else
@@ -55,7 +66,9 @@ public class Main {
                 }
             }
             else {
-                // Report files containing all words
+                /**
+                 * Report files containing all words
+                 */
                 Set<String> files = searcher.search(wordList);
                 if (files.isEmpty()) System.out.println("Sorry, couldn't find anything");
                 else {
